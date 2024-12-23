@@ -1,5 +1,7 @@
 <template>
   <div>
+  <h1>Список Компаний</h1>
+
     <table>
       <thead>
         <tr>
@@ -75,31 +77,58 @@ onMounted(async () => {
 </script>
 
 <style>
+h1 {
+  text-align: center;
+}
 table {
-  width: 100%;
+  width: 80%;
+  margin: 20px auto;
   border-collapse: collapse;
-  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+  background-color: #4caf50;
+  color: #fff;
+  text-transform: uppercase;
 }
 
 th,
 td {
-  border: 1px solid #ddd;
-  padding: 8px;
+  padding: 12px;
   text-align: left;
+  border: 1px solid #ddd;
+  cursor: pointer;
 }
 
-th {
-  background-color: #f4f4f4;
+tr:nth-child(even) {
+  background-color: #f9f9f9;
 }
+
+
 
 .pagination {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 10px;
+  margin: 20px 0;
 }
 
 button {
-  padding: 5px 10px;
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #45a049;
 }
 
 button:disabled {

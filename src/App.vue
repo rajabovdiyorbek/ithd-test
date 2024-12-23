@@ -1,5 +1,4 @@
 <template>
-  <h1>Список Компаний</h1>
   <TableList />
 </template>
 
