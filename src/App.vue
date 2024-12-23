@@ -1,9 +1,8 @@
-<script setup>
-</script>
-
 <template>
-  <div>hello</div>
+  <h1>Список Компаний</h1>
+  <TableList />
 </template>
 
-<style scoped>
-</style>
+<script setup>
+import TableList from './components/TableList.vue'
+</script>
